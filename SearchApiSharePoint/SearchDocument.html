@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<title>Untitled 1</title>
+
+<link href="../SiteAssets/WebPart/SearchDocument.css" rel="stylesheet"/>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+<script type="text/jscript" src="../SiteAssets/WebPart/SearchDocument.js"></script>
+
+
+
+</head>
+
+<body>
+
+<table>
+  <tr>
+    <th>Financial Year</th>
+    <th>Assessment Year</th>
+    <th>Quarter</th>
+    <th>PAN</th>
+  </tr>
+  <tr>
+    <td>
+    <select id="ddlFinancialYear" onchange="getAssessmentYear()">
+    </select>    
+    </td>
+    
+    <td>
+    <select id="ddlAssessmentYear" disabled>
+    <option value="2022-23">2022-23</option>
+      </select>
+    </td>
+    
+    <td>
+    <select id="ddlQuter">
+    <option value="1">1</option>
+    <option value="2">2</option>
+	<option value="3">3</option>
+	<option value="4">4</option>
+    </select>
+    
+  </td>
+  <td>
+  <input id="PAN" type="text"/>
+  </td>
+  </tr>
+  <tr>
+  
+  <td>
+  <br>
+  
+  </td>    
+  </tr>
+  </table>
+  <button type="button" class="pointer" onclick="search()" >Search</button>
+  
+  <br>
+  
+  <table id="tableBody2">
+  <tr>
+    <th>File Name</th>
+    <th>File Size</th>
+    <th>File Path</th>
+    
+    
+  </tr>
+    <tr>
+    <td id="getFile"></td>
+    <td>
+    <!--<a class="pointer" href="...">Dwonload</a>-->
+
+    </td> 
+  </tr>
+  <br/>
+    <tr>
+    <td id="getFile" ></td>
+    <td>
+    <!--<a class="pointer" href="">Dwonload</a>-->
+    </td> 
+  </tr>
+ </table>
+ 
+<div id="errorMessage" style="color:red;"></div>
+
+</body>
+
+</html>
